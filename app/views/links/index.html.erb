@@ -7,7 +7,8 @@
   <div class="unread-link">
     <%= link.title %> - <%= link.url %>
   </div>
-  <%= button_to "Mark as read", link_path(link.id, "link[read]" => true), method: :put %><br>
+  <%= button_to "Mark as read", link_path(link.id, "link[read]" => true), method: :put, class: "mark-read" %>
+  <%= button_to "Edit link", edit_link_path(link.id), method: :get, class: "edit-link" %><br>
 <% end %>
 
 <h2>Read Links:</h2>
@@ -15,5 +16,6 @@
   <div class="read-link">
     <%= link.title %> - <%= link.url %>
   </div>
-  <%= button_to "Mark as unread", link_path(link.id, "link[read]" => false), method: :put %><br>
+  <%= button_to "Mark as unread", link_path(link.id, "link[read]" => false), method: :put, class: "mark-unread" %>
+  <%= button_to "Edit link", edit_link_path(link.id), method: :get, class: "edit-link" %><br>
 <% end %>
