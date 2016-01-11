@@ -22,7 +22,7 @@ class LinksController < ApplicationController
       redirect_to links_path
     else
       flash[:errors] = link.errors.full_messages.first
-      redirect_to links_path
+      redirect_to new_link_path
     end
   end
 
