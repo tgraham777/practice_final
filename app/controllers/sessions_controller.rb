@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
     if current_user
       flash[:notice] = "You're already logged in!"
-      redirect_to user_path(current_user.id)
+      redirect_to links_path
     end
   end
 
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       flash[:notice] = "Welcome #{@user.name}!"
-      redirect_to user_path(@user.id)
+      redirect_to links_path
     else
       flash.now[:errors] = "Invalid Login"
       render :new

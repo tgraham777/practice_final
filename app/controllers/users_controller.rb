@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:notice] = "Welcome #{user.name}!"
-      redirect_to user_path(user.id)
+      redirect_to links_path
     else
       flash[:errors] = user.errors.full_messages.first
       redirect_to new_user_path
