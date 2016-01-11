@@ -9,13 +9,13 @@
 
 <body>
 
-<% flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, class: name %>
-<% end -%>
-
 <% if current_user %>
   <%= render 'layouts/nav' %>
 <% end %>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
 
 <%= yield %>
 
