@@ -4,17 +4,17 @@ describe User do
   describe "Validations" do
     context "on a new user" do
       it "should not be valid without a password" do
-        user = User.new(password: nil, password_confirmation: nil)
+        user = User.new(name: "Ben", email: "b@j.net", password: nil, password_confirmation: nil)
         expect(user).to_not be_valid
       end
 
-      it "should be not be valid with a short password" do
-        user = User.new(password: 'short', password_confirmation: 'short')
-        expect(user).to_not be_valid
+      it "should be valid with a matching password confirmation" do
+        user = User.new(name: "Ben", email: "b@j.net", password: "short", password_confirmation: "short")
+        expect(user).to be_valid
       end
 
       it "should not be valid with a confirmation mismatch" do
-        user = User.new(password: 'short', password_confirmation: 'long')
+        user = User.new(name: "Ben", email: "b@j.net", password: "short", password_confirmation: "long")
         expect(user).to_not be_valid
       end
     end

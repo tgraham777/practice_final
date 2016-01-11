@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome #{user.name}!"
       redirect_to user_path(user.id)
     else
-      flash[:errors] = user.errors.full_messages.join(", ")
+      flash[:errors] = user.errors.full_messages.first
       redirect_to new_user_path
     end
   end
@@ -22,6 +22,6 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
