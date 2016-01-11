@@ -1,2 +1,6 @@
-<%= link_to "Log In", login_path %><br>
-<%= link_to "Sign Up", new_user_path %>
+<h1 class="big-title">Welcome to Thoughtbox!</h1>
+
+<div class="first-buttons">
+  <%= button_to "Log In", login_path, method: :get, class: "login-button" %><br>
+  <%= button_to "Sign Up", new_user_path, method: :get, class: "signup-button" %>
+</div>

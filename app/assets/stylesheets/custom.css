@@ -1,3 +1,44 @@
+.big-title {
+  text-align: center;
+}
+
+.login-button {
+  border-width: medium;
+  background-color: #EEE;
+  border-radius: 5px;
+  width: 20%;
+  color: green;
+  font-size: 15px;
+}
+
+.signup-button {
+  border-width: medium;
+  background-color: #EEE;
+  border-radius: 5px;
+  width: 20%;
+  color: red;
+  font-size: 15px;
+}
+
+.first-buttons {
+  margin-left: 550px;
+}
+
+.login-button2 {
+  border-width: medium;
+  background-color: #EEE;
+  border-radius: 5px;
+  color: green;
+}
+
+.signup-button2 {
+  border-width: medium;
+  background-color: #EEE;
+  border-radius: 5px;
+  color: red;
+}
+
+
 .read-link {
   color: #AAA;
 }

@@ -2,16 +2,16 @@
 
 <%= form_for(User.new) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, :placeholder => "name"%><br>
+  <%= f.text_field :name %><br>
 
   <%= f.label :email %>
-  <%= f.text_field :email,  :placeholder => "email"%><br>
+  <%= f.text_field :email %><br>
 
   <%= f.label :password %>
-  <%= f.password_field :password,  :placeholder => "password"%><br>
+  <%= f.password_field :password %><br>
 
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%><br>
+  <%= f.password_field :password_confirmation %><br>
 
-  <%= f.submit "Sign up" %>
+  <%= f.submit "Sign Up", class: "signup-button2" %>
 <% end %>
