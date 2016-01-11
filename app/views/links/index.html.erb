@@ -2,14 +2,18 @@
 
 <%= link_to "Add a new link", new_link_path %><br><br>
 
-<h2>Read Links:</h2>
-<% @read_links.each do |link| %>
-  <%= link.title %> - <%= link.url %>
-  <%= button_to "Mark as unread", link_path(link.id, "link[read]" => false), method: :put %><br>
-<% end %>
-
 <h2>Unread Links:</h2>
 <% @unread_links.each do |link| %>
-  <%= link.title %> - <%= link.url %>
+  <div class="unread-link">
+    <%= link.title %> - <%= link.url %>
+  </div>
   <%= button_to "Mark as read", link_path(link.id, "link[read]" => true), method: :put %><br>
+<% end %>
+
+<h2>Read Links:</h2>
+<% @read_links.each do |link| %>
+  <div class="read-link">
+    <%= link.title %> - <%= link.url %>
+  </div>
+  <%= button_to "Mark as unread", link_path(link.id, "link[read]" => false), method: :put %><br>
 <% end %>
