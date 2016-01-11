@@ -1,0 +1,9 @@
+<%= form_for(@link) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :placeholder => "title"  %><br>
+
+  <%= f.label :url %>
+  <%= f.text_field :url, :placeholder => "url" %><br>
+
+  <%= f.submit "Add link" %>
+<% end %>
