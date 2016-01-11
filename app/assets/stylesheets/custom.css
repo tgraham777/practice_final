@@ -24,6 +24,10 @@
   margin-left: 550px;
 }
 
+.flash {
+  background-color: yellow;
+}
+
 .login-button2 {
   border-width: medium;
   background-color: #EEE;

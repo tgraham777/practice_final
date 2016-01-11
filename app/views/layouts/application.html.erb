@@ -14,7 +14,7 @@
 <% end %>
 
 <% flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, class: name %>
+  <%= content_tag :div, msg, class: 'flash' %>
 <% end -%>
 
 <%= yield %>
